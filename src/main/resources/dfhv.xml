@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Objekt_DFH_V>
+    <bauJahr>2000</bauJahr>
+    <strObjektartWEnum>EINFAMILIEN_WOHNHAUS</strObjektartWEnum>
+    <strGrundFlaecheDouble>500</strGrundFlaecheDouble>
+    <strWertArtWB2Enum>WOHNFLEACHE</strWertArtWB2Enum>
+    <strWertArtDouble>150</strWertArtDouble>
+    <geschossAnzahl>2</geschossAnzahl>
+    <garagenAnzahl>0</garagenAnzahl>
+    <strAusstattungsstandardErmittlungWB6Enum>MANUELL</strAusstattungsstandardErmittlungWB6Enum>
+    <strAusstattungWEnum>MITTEL</strAusstattungWEnum>
+    <ausstattungAussenWaendegedaemmt>false</ausstattungAussenWaendegedaemmt>
+    <ausstattungGaesteWC>false</ausstattungGaesteWC>
+    <ausstattungLeitungenAufPutz>false</ausstattungLeitungenAufPutz>
+    <ausstattungMehrAlseinBad>false</ausstattungMehrAlseinBad>
+    <ausstattungOffenerKamin>false</ausstattungOffenerKamin>
+    <ausstattungSauna>false</ausstattungSauna>
+    <strEFHZFHBauweiseWEnum>FREISTEHEND</strEFHZFHBauweiseWEnum>
+    <strEFHZFHDachausbauWB2Enum>VOLL</strEFHZFHDachausbauWB2Enum>
+    <strEFHZFHGebaeudeartWEnum>FERTIGHAUS_MASSIV</strEFHZFHGebaeudeartWEnum>
+    <strEFHZFHUnterkellerungWEnum>VOLL</strEFHZFHUnterkellerungWEnum>
+    <strKellerAusbauWEnum>KEIN</strKellerAusbauWEnum>
+    <strArtAussenanlagenWEnum>UEBLICH</strArtAussenanlagenWEnum>
+    <strNutzungsWB2Enum>EIGENGENUTZT</strNutzungsWB2Enum>
+    <photovoltaik>false</photovoltaik>
+    <photovoltaikBaujahr>0</photovoltaikBaujahr>
+</Objekt_DFH_V>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css"/>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <header>
+        <img class=header-image src="images/header.png">
+         
+    </header>
+  <h1>Kunde Auswahl</h1>
+<label class="container">First
+    <input  id="First" type="radio" checked="checked" name="radio" onchange="onCustomerChange()">
+    <span class="checkmark"></span>
+</label>
+<label class="container">Swiss
+    <input id="Swiss" type="radio" name="radio" onchange="onCustomerChange()">
+    <span class="checkmark"></span>
+</label>
+<label class="container">Three
+    <input id="Three" type="radio" name="radio" onchange="onCustomerChange()">
+    <span class="checkmark"></span>
+</label>
+<label class="container">Four
+    <input id="Four" type="radio" name="radio" onchange="onCustomerChange()">
+    <span class="checkmark"></span>
+</label>
+        
+<h1>Mockservice Ein/ausschalten</h1>
+<label class="switch" >
+	<input class="switch-input" type="checkbox"  id="isEnabled" onchange="myFunction()"/>
+	<span class="switch-label" data-on="On" data-off="Off"></span> 
+	<span class="switch-handle"></span> 
+</label>
+
+</body>
+</html>

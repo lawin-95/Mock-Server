@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<bindings xmlns="http://java.sun.com/xml/ns/jaxb" if-exists="true" version="2.1">
+  <!--
+
+Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.3.0 generiert 
+Siehe <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+Generiert: 2022.05.16 um 05:04:23 AM CEST 
+
+  -->
+  <bindings xmlns:tns="http://ws.t2c.webservices.sprengnetter.de/v12" if-exists="true" scd="x-schema::tns">
+    <schemaBindings map="false">
+      <package name="com.MockServer"/>
+    </schemaBindings>
+    <bindings if-exists="true" scd="~tns:bewertungsDaten">
+      <class ref="com.MockServer.BewertungsDaten"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:BewerteUBGS">
+      <class ref="com.MockServer.BewerteUBGS"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:user">
+      <class ref="com.MockServer.User"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:adresse">
+      <class ref="com.MockServer.Adresse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:Objekt_UBGS">
+      <class ref="com.MockServer.ObjektUBGS"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:BewerteMFH">
+      <class ref="com.MockServer.BewerteMFH"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:Objekt_MFH">
+      <class ref="com.MockServer.ObjektMFH"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:BewerteETWV">
+      <class ref="com.MockServer.BewerteETWV"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:Objekt_ETW_V">
+      <class ref="com.MockServer.ObjektETWV"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:BewerteETWNV">
+      <class ref="com.MockServer.BewerteETWNV"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:Objekt_ETW_NV">
+      <class ref="com.MockServer.ObjektETWNV"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:BewerteDFHV">
+      <class ref="com.MockServer.BewerteDFHV"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:Objekt_DFH_V">
+      <class ref="com.MockServer.ObjektDFHV"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:BewerteDFHNV">
+      <class ref="com.MockServer.BewerteDFHNV"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:Objekt_DFH_NV">
+      <class ref="com.MockServer.ObjektDFHNV"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:BewerteEFHZFH">
+      <class ref="com.MockServer.BewerteEFHZFH"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:Objekt_EFH_ZFH">
+      <class ref="com.MockServer.ObjektEFHZFH"/>
+    </bindings>
+  </bindings>
+</bindings>

@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://ws.t2c.webservices.sprengnetter.de/v12" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ws.t2c.webservices.sprengnetter.de/v12" targetNamespace="http://ws.t2c.webservices.sprengnetter.de/v12">
+  <wsdl:types>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://ws.t2c.webservices.sprengnetter.de/v12">
+    <xs:element name="BewerteUBGS">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" type="tns:user"/>
+                <xs:element name="adresse" type="tns:adresse"/>
+                <xs:element name="Objekt_UBGS" type="tns:Objekt_UBGS"/>
+                <xs:element name="bewertungsDaten" type="tns:bewertungsDaten"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="BewerteMFH">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" type="tns:user"/>
+                <xs:element name="adresse" type="tns:adresse"/>
+                <xs:element name="Objekt_MFH" type="tns:Objekt_MFH"/>
+                <xs:element name="bewertungsDaten" type="tns:bewertungsDaten"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="BewerteETWV">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" type="tns:user"/>
+                <xs:element name="adresse" type="tns:adresse"/>
+                <xs:element name="Objekt_ETW_V" type="tns:Objekt_ETW_V"/>
+                <xs:element name="bewertungsDaten" type="tns:bewertungsDaten"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="BewerteETWNV">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" type="tns:user"/>
+                <xs:element name="adresse" type="tns:adresse"/>
+                <xs:element name="Objekt_ETW_NV" type="tns:Objekt_ETW_NV"/>
+                <xs:element name="bewertungsDaten" type="tns:bewertungsDaten"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="BewerteDFHV">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" type="tns:user"/>
+                <xs:element name="adresse" type="tns:adresse"/>
+                <xs:element name="Objekt_DFH_V" type="tns:Objekt_DFH_V"/>
+                <xs:element name="bewertungsDaten" type="tns:bewertungsDaten"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="BewerteDFHNV">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" type="tns:user"/>
+                <xs:element name="adresse" type="tns:adresse"/>
+                <xs:element name="Objekt_DFH_NV" type="tns:Objekt_DFH_NV"/>
+                <xs:element name="bewertungsDaten" type="tns:bewertungsDaten"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="BewerteEFHZFH">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" type="tns:user"/>
+                <xs:element name="adresse" type="tns:adresse"/>
+                <xs:element name="Objekt_EFH_ZFH" type="tns:Objekt_EFH_ZFH"/>
+                <xs:element name="bewertungsDaten" type="tns:bewertungsDaten"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="user">
+            <xs:sequence>
+                <xs:element name="username" type="xs:string"/>
+                <xs:element name="passwort" type="xs:string"/>
+                <xs:element name="mandantenKennung" type="xs:string"/>
+                <xs:element name="benutzerKennung" type="xs:string"/>
+            </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="adresse">
+            <xs:sequence>
+                <xs:element name="hausNummer" type="xs:unsignedByte"/>
+                <xs:element name="ort" type="xs:string"/>
+                <xs:element name="plz" type="xs:string"/>
+                <xs:element name="strasse" type="xs:string"/>
+                <xs:element name="stadtTeil"/>
+                <xs:element name="nation"/>
+            </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Objekt_EFH_ZFH">
+            <xs:sequence>
+                <xs:element name="bauJahr" type="xs:unsignedShort"/>
+                <xs:element name="strObjektartWEnum" type="xs:string"/>
+                <xs:element name="strGrundFlaecheDouble" type="xs:unsignedShort"/>
+                <xs:element name="strWertArtWB2Enum" type="xs:string"/>
+                <xs:element name="strWertArtDouble" type="xs:unsignedByte"/>
+                <xs:element name="geschossAnzahl" type="xs:unsignedByte"/>
+                <xs:element name="garagenAnzahl" type="xs:unsignedByte"/>
+                <xs:element name="strAusstattungsstandardErmittlungWB6Enum" type="xs:string"/>
+                <xs:element name="strAusstattungWEnum" type="xs:string"/>
+                <xs:element name="ausstattungAussenWaendegedaemmt" type="xs:boolean"/>
+                <xs:element name="ausstattungGaesteWC" type="xs:boolean"/>
+                <xs:element name="ausstattungLeitungenAufPutz" type="xs:boolean"/>
+                <xs:element name="ausstattungMehrAlseinBad" type="xs:boolean"/>
+                <xs:element name="ausstattungOffenerKamin" type="xs:boolean"/>
+                <xs:element name="ausstattungSauna" type="xs:boolean"/>
+                <xs:element name="strEFHZFHBauweiseWEnum" type="xs:string"/>
+                <xs:element name="strEFHZFHDachausbauWB2Enum" type="xs:string"/>
+                <xs:element name="strEFHZFHGebaeudeartWEnum" type="xs:string"/>
+                <xs:element name="strEFHZFHUnterkellerungWEnum" type="xs:string"/>
+                <xs:element name="strKellerAusbauWEnum" type="xs:string"/>
+                <xs:element name="strArtAussenanlagenWEnum" type="xs:string"/>
+                <xs:element name="strNutzungsWB2Enum" type="xs:string"/>
+                <xs:element name="photovoltaik" type="xs:boolean"/>
+                <xs:element name="photovoltaikBaujahr" type="xs:unsignedByte"/>
+            </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="bewertungsDaten">
+            <xs:sequence>
+                <xs:element name="strDarlehenssummeDouble" type="xs:unsignedShort"/>
+                <xs:element name="strKaufpreisDouble" type="xs:string"/>
+                <xs:element name="strModernisierungskostenDouble"/>
+                <xs:element name="strVorhabenWB2Enum" type="xs:string"/>
+                <xs:element name="freieKennzeichnung" type="xs:unsignedInt"/>
+                <xs:element name="zuFinanzieren">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="strModernisierungWB2EnumBaederWCs" type="xs:string"/>
+                            <xs:element name="strModernisierungWB2EnumBodenWandTreppenhaus" type="xs:string"/>
+                            <xs:element name="strModernisierungWB2EnumDach" type="xs:string"/>
+                            <xs:element name="strModernisierungWB2EnumFenster" type="xs:string"/>
+                            <xs:element name="strModernisierungWB2EnumHeizung" type="xs:string"/>
+                            <xs:element name="strModernisierungWB2EnumRaumaufteilung" type="xs:string"/>
+                            <xs:element name="strModernisierungWB2EnumStromWasserLeitung" type="xs:string"/>
+                            <xs:element name="strModernisierungWB2EnumWaermedaemmung" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="strModernisierungsklassenWB5Enum" type="xs:string"/>
+                <xs:element name="strModernisierungsErmittlungWB5Enum" type="xs:string"/>
+                <xs:element name="erbbauRecht" type="xs:boolean"/>
+            </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Objekt_UBGS">
+        <xs:sequence>
+            <xs:element name="bauJahr" type="xs:unsignedShort"/>
+            <xs:element name="strObjektartWEnum" type="xs:string"/>
+            <xs:element name="strGrundFlaecheDouble" type="xs:unsignedShort"/>
+            <xs:element name="strWertArtWB2Enum" type="xs:string"/>
+            <xs:element name="strWertArtDouble" type="xs:unsignedByte"/>
+            <xs:element name="geschossAnzahl" type="xs:unsignedByte"/>
+            <xs:element name="garagenAnzahl" type="xs:unsignedByte"/>
+            <xs:element name="strAusstattungsstandardErmittlungWB6Enum" type="xs:string"/>
+            <xs:element name="strAusstattungWEnum" type="xs:string"/>
+            <xs:element name="ausstattungAussenWaendegedaemmt" type="xs:boolean"/>
+            <xs:element name="ausstattungGaesteWC" type="xs:boolean"/>
+            <xs:element name="ausstattungLeitungenAufPutz" type="xs:boolean"/>
+            <xs:element name="ausstattungMehrAlseinBad" type="xs:boolean"/>
+            <xs:element name="ausstattungOffenerKamin" type="xs:boolean"/>
+            <xs:element name="ausstattungSauna" type="xs:boolean"/>
+            <xs:element name="strEFHZFHBauweiseWEnum" type="xs:string"/>
+            <xs:element name="strEFHZFHDachausbauWB2Enum" type="xs:string"/>
+            <xs:element name="strEFHZFHGebaeudeartWEnum" type="xs:string"/>
+            <xs:element name="strEFHZFHUnterkellerungWEnum" type="xs:string"/>
+            <xs:element name="strKellerAusbauWEnum" type="xs:string"/>
+            <xs:element name="strArtAussenanlagenWEnum" type="xs:string"/>
+            <xs:element name="strNutzungsWB2Enum" type="xs:string"/>
+            <xs:element name="photovoltaik" type="xs:boolean"/>
+            <xs:element name="photovoltaikBaujahr" type="xs:unsignedByte"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Objekt_MFH">
+        <xs:sequence>
+            <xs:element name="bauJahr" type="xs:unsignedShort"/>
+            <xs:element name="strObjektartWEnum" type="xs:string"/>
+            <xs:element name="strGrundFlaecheDouble" type="xs:unsignedShort"/>
+            <xs:element name="strWertArtWB2Enum" type="xs:string"/>
+            <xs:element name="strWertArtDouble" type="xs:unsignedByte"/>
+            <xs:element name="geschossAnzahl" type="xs:unsignedByte"/>
+            <xs:element name="garagenAnzahl" type="xs:unsignedByte"/>
+            <xs:element name="strAusstattungsstandardErmittlungWB6Enum" type="xs:string"/>
+            <xs:element name="strAusstattungWEnum" type="xs:string"/>
+            <xs:element name="ausstattungAussenWaendegedaemmt" type="xs:boolean"/>
+            <xs:element name="ausstattungGaesteWC" type="xs:boolean"/>
+            <xs:element name="ausstattungLeitungenAufPutz" type="xs:boolean"/>
+            <xs:element name="ausstattungMehrAlseinBad" type="xs:boolean"/>
+            <xs:element name="ausstattungOffenerKamin" type="xs:boolean"/>
+            <xs:element name="ausstattungSauna" type="xs:boolean"/>
+            <xs:element name="strEFHZFHBauweiseWEnum" type="xs:string"/>
+            <xs:element name="strEFHZFHDachausbauWB2Enum" type="xs:string"/>
+            <xs:element name="strEFHZFHGebaeudeartWEnum" type="xs:string"/>
+            <xs:element name="strEFHZFHUnterkellerungWEnum" type="xs:string"/>
+            <xs:element name="strKellerAusbauWEnum" type="xs:string"/>
+            <xs:element name="strArtAussenanlagenWEnum" type="xs:string"/>
+            <xs:element name="strNutzungsWB2Enum" type="xs:string"/>
+            <xs:element name="photovoltaik" type="xs:boolean"/>
+            <xs:element name="photovoltaikBaujahr" type="xs:unsignedByte"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Objekt_ETW_V">
+        <xs:sequence>
+            <xs:element name="bauJahr" type="xs:unsignedShort"/>
+            <xs:element name="strObjektartWEnum" type="xs:string"/>
+            <xs:element name="strGrundFlaecheDouble" type="xs:unsignedShort"/>
+            <xs:element name="strWertArtWB2Enum" type="xs:string"/>
+            <xs:element name="strWertArtDouble" type="xs:unsignedByte"/>
+            <xs:element name="geschossAnzahl" type="xs:unsignedByte"/>
+            <xs:element name="garagenAnzahl" type="xs:unsignedByte"/>
+            <xs:element name="strAusstattungsstandardErmittlungWB6Enum" type="xs:string"/>
+            <xs:element name="strAusstattungWEnum" type="xs:string"/>
+            <xs:element name="ausstattungAussenWaendegedaemmt" type="xs:boolean"/>
+            <xs:element name="ausstattungGaesteWC" type="xs:boolean"/>
+            <xs:element name="ausstattungLeitungenAufPutz" type="xs:boolean"/>
+            <xs:element name="ausstattungMehrAlseinBad" type="xs:boolean"/>
+            <xs:element name="ausstattungOffenerKamin" type="xs:boolean"/>
+            <xs:element name="ausstattungSauna" type="xs:boolean"/>
+            <xs:element name="strEFHZFHBauweiseWEnum" type="xs:string"/>
+            <xs:element name="strEFHZFHDachausbauWB2Enum" type="xs:string"/>
+            <xs:element name="strEFHZFHGebaeudeartWEnum" type="xs:string"/>
+            <xs:element name="strEFHZFHUnterkellerungWEnum" type="xs:string"/>
+            <xs:element name="strKellerAusbauWEnum" type="xs:string"/>
+            <xs:element name="strArtAussenanlagenWEnum" type="xs:string"/>
+            <xs:element name="strNutzungsWB2Enum" type="xs:string"/>
+            <xs:element name="photovoltaik" type="xs:boolean"/>
+            <xs:element name="photovoltaikBaujahr" type="xs:unsignedByte"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Objekt_ETW_NV">
+        <xs:sequence>
+            <xs:element name="bauJahr" type="xs:unsignedShort"/>
+            <xs:element name="strObjektartWEnum" type="xs:string"/>
+            <xs:element name="strGrundFlaecheDouble" type="xs:unsignedShort"/>
+            <xs:element name="strWertArtWB2Enum" type="xs:string"/>
+            <xs:element name="strWertArtDouble" type="xs:unsignedByte"/>
+            <xs:element name="geschossAnzahl" type="xs:unsignedByte"/>
+            <xs:element name="garagenAnzahl" type="xs:unsignedByte"/>
+            <xs:element name="strAusstattungsstandardErmittlungWB6Enum" type="xs:string"/>
+            <xs:element name="strAusstattungWEnum" type="xs:string"/>
+            <xs:element name="ausstattungAussenWaendegedaemmt" type="xs:boolean"/>
+            <xs:element name="ausstattungGaesteWC" type="xs:boolean"/>
+            <xs:element name="ausstattungLeitungenAufPutz" type="xs:boolean"/>
+            <xs:element name="ausstattungMehrAlseinBad" type="xs:boolean"/>
+            <xs:element name="ausstattungOffenerKamin" type="xs:boolean"/>
+            <xs:element name="ausstattungSauna" type="xs:boolean"/>
+            <xs:element name="strEFHZFHBauweiseWEnum" type="xs:string"/>
+            <xs:element name="strEFHZFHDachausbauWB2Enum" type="xs:string"/>
+            <xs:element name="strEFHZFHGebaeudeartWEnum" type="xs:string"/>
+            <xs:element name="strEFHZFHUnterkellerungWEnum" type="xs:string"/>
+            <xs:element name="strKellerAusbauWEnum" type="xs:string"/>
+            <xs:element name="strArtAussenanlagenWEnum" type="xs:string"/>
+            <xs:element name="strNutzungsWB2Enum" type="xs:string"/>
+            <xs:element name="photovoltaik" type="xs:boolean"/>
+            <xs:element name="photovoltaikBaujahr" type="xs:unsignedByte"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Objekt_DFH_V">
+        <xs:sequence>
+            <xs:element name="bauJahr" type="xs:unsignedShort"/>
+            <xs:element name="strObjektartWEnum" type="xs:string"/>
+            <xs:element name="strGrundFlaecheDouble" type="xs:unsignedShort"/>
+            <xs:element name="strWertArtWB2Enum" type="xs:string"/>
+            <xs:element name="strWertArtDouble" type="xs:unsignedByte"/>
+            <xs:element name="geschossAnzahl" type="xs:unsignedByte"/>
+            <xs:element name="garagenAnzahl" type="xs:unsignedByte"/>
+            <xs:element name="strAusstattungsstandardErmittlungWB6Enum" type="xs:string"/>
+            <xs:element name="strAusstattungWEnum" type="xs:string"/>
+            <xs:element name="ausstattungAussenWaendegedaemmt" type="xs:boolean"/>
+            <xs:element name="ausstattungGaesteWC" type="xs:boolean"/>
+            <xs:element name="ausstattungLeitungenAufPutz" type="xs:boolean"/>
+            <xs:element name="ausstattungMehrAlseinBad" type="xs:boolean"/>
+            <xs:element name="ausstattungOffenerKamin" type="xs:boolean"/>
+            <xs:element name="ausstattungSauna" type="xs:boolean"/>
+            <xs:element name="strEFHZFHBauweiseWEnum" type="xs:string"/>
+            <xs:element name="strEFHZFHDachausbauWB2Enum" type="xs:string"/>
+            <xs:element name="strEFHZFHGebaeudeartWEnum" type="xs:string"/>
+            <xs:element name="strEFHZFHUnterkellerungWEnum" type="xs:string"/>
+            <xs:element name="strKellerAusbauWEnum" type="xs:string"/>
+            <xs:element name="strArtAussenanlagenWEnum" type="xs:string"/>
+            <xs:element name="strNutzungsWB2Enum" type="xs:string"/>
+            <xs:element name="photovoltaik" type="xs:boolean"/>
+            <xs:element name="photovoltaikBaujahr" type="xs:unsignedByte"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Objekt_DFH_NV">
+        <xs:sequence>
+            <xs:element name="bauJahr" type="xs:unsignedShort"/>
+            <xs:element name="strObjektartWEnum" type="xs:string"/>
+            <xs:element name="strGrundFlaecheDouble" type="xs:unsignedShort"/>
+            <xs:element name="strWertArtWB2Enum" type="xs:string"/>
+            <xs:element name="strWertArtDouble" type="xs:unsignedByte"/>
+            <xs:element name="geschossAnzahl" type="xs:unsignedByte"/>
+            <xs:element name="garagenAnzahl" type="xs:unsignedByte"/>
+            <xs:element name="strAusstattungsstandardErmittlungWB6Enum" type="xs:string"/>
+            <xs:element name="strAusstattungWEnum" type="xs:string"/>
+            <xs:element name="ausstattungAussenWaendegedaemmt" type="xs:boolean"/>
+            <xs:element name="ausstattungGaesteWC" type="xs:boolean"/>
+            <xs:element name="ausstattungLeitungenAufPutz" type="xs:boolean"/>
+            <xs:element name="ausstattungMehrAlseinBad" type="xs:boolean"/>
+            <xs:element name="ausstattungOffenerKamin" type="xs:boolean"/>
+            <xs:element name="ausstattungSauna" type="xs:boolean"/>
+            <xs:element name="strEFHZFHBauweiseWEnum" type="xs:string"/>
+            <xs:element name="strEFHZFHDachausbauWB2Enum" type="xs:string"/>
+            <xs:element name="strEFHZFHGebaeudeartWEnum" type="xs:string"/>
+            <xs:element name="strEFHZFHUnterkellerungWEnum" type="xs:string"/>
+            <xs:element name="strKellerAusbauWEnum" type="xs:string"/>
+            <xs:element name="strArtAussenanlagenWEnum" type="xs:string"/>
+            <xs:element name="strNutzungsWB2Enum" type="xs:string"/>
+            <xs:element name="photovoltaik" type="xs:boolean"/>
+            <xs:element name="photovoltaikBaujahr" type="xs:unsignedByte"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:portType name="Bewertungensport">
+  </wsdl:portType>
+  <wsdl:binding name="BewertungensportSoap11" type="tns:Bewertungensport">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+  </wsdl:binding>
+  <wsdl:service name="BewertungensportService">
+    <wsdl:port binding="tns:BewertungensportSoap11" name="BewertungensportSoap11">
+      <soap:address location="http://localhost:8080/ws"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
