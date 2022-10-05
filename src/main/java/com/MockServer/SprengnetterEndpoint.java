@@ -16,8 +16,8 @@ public class SprengnetterEndpoint {
 
     private static final String NAMESPACE_URI = "http://ws.t2c.webservices.sprengnetter.de/v12";
 
-    private AdminService adminService;
-    private SprengnetterRepository sprengnetterRepository;
+    private final AdminService adminService;
+    private final SprengnetterRepository sprengnetterRepository;
 
    @Autowired
     public SprengnetterEndpoint(AdminService adminService, SprengnetterRepository sprengnetterRepository) {
@@ -25,7 +25,6 @@ public class SprengnetterEndpoint {
         this.sprengnetterRepository = sprengnetterRepository;
 
     }
-
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "BewerteDFHV")
     @ResponsePayload
     public BewerteDFHV bewerteDFHV(@RequestPayload BewerteDFHV request) {
@@ -40,11 +39,12 @@ public class SprengnetterEndpoint {
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "BewerteEFHZFH")
     @ResponsePayload
     public BewerteEFHZFH bewerteEFHZFH(@RequestPayload BewerteEFHZFH request) {
+        String customer = adminService.getCustomer();
         BewerteEFHZFH response = new BewerteEFHZFH();
         response.setUser(request.getUser());
         response.setAdresse(request.getAdresse());
         response.setBewertungsDaten(request.getBewertungsDaten());
-        response.setObjektEFHZFH(sprengnetterRepository.bewerteEFHZFH());
+        response.setObjektEFHZFH(sprengnetterRepository.bewerteEFHZFH(customer));
         return response;
     }
 

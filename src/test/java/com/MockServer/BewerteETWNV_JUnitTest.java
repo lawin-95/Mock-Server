@@ -3,19 +3,16 @@ package com.MockServer;
 import de.sprengnetter.webservices.t2c.ws.v12.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 
-import  static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-/*
-public class JUnitTest {
 
+public class BewerteETWNV_JUnitTest {
 
 
 
     private User getTestUser(){
-       User user = new User();
+        User user = new User();
         user.setUsername("pfleger");
         user.setPasswort("G;3i))9V");
         user.setBenutzerKennung("pfleger");
@@ -51,7 +48,7 @@ public class JUnitTest {
     }
 
     @Test
-    public void bewerteDFHV(){
+    public void bewerteETWNV(){
         BewerteDFHV bewerteDFHV = new BewerteDFHV();
         bewerteDFHV.setUser(getTestUser());
         bewerteDFHV.setAdresse(getTestAdresse());
@@ -60,8 +57,10 @@ public class JUnitTest {
         dfhv.setStrObjektartWEnum("EINFAMILIEN_WOHNHAUS");
         dfhv.setBauJahr(2000);
         SprengnetterRepository mockRepository = mock(SprengnetterRepository.class);
+        AdminService mockAdminService = mock(AdminService.class);
         when(mockRepository.bewerteDFHV("First")).thenReturn(dfhv);
-        SprengnetterEndpoint endpoint = new SprengnetterEndpoint(mockRepository);
+        when(mockAdminService.getCustomer()).thenReturn("First");
+        SprengnetterEndpoint endpoint = new SprengnetterEndpoint(mockAdminService,mockRepository);
         BewerteDFHV response = endpoint.bewerteDFHV(bewerteDFHV);
         checkTestUser(response.getUser());
         checkTestAdresse(response.getAdresse());
@@ -75,4 +74,3 @@ public class JUnitTest {
 
     }
 }
-*/

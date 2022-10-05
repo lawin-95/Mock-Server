@@ -2,66 +2,6 @@
 <!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ws.t2c.webservices.sprengnetter.de/v12"
            targetNamespace="http://ws.t2c.webservices.sprengnetter.de/v12" elementFormDefault="qualified">
-    <xs:element name="BewerteUBGS">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="user" type="tns:user" />
-                <xs:element name="adresse" type="tns:adresse" />
-                <xs:element name="Objekt_UBGS" type="tns:Objekt_UBGS" />
-                <xs:element name="bewertungsDaten" type="tns:bewertungsDaten" />
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="BewerteMFH">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="user" type="tns:user" />
-                <xs:element name="adresse" type="tns:adresse" />
-                <xs:element name="Objekt_MFH" type="tns:Objekt_MFH" />
-                <xs:element name="bewertungsDaten" type="tns:bewertungsDaten" />
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="BewerteETWV">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="user" type="tns:user" />
-                <xs:element name="adresse" type="tns:adresse" />
-                <xs:element name="Objekt_ETW_V" type="tns:Objekt_ETW_V" />
-                <xs:element name="bewertungsDaten" type="tns:bewertungsDaten" />
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="BewerteETWNV">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="user" type="tns:user" />
-                <xs:element name="adresse" type="tns:adresse" />
-                <xs:element name="Objekt_ETW_NV" type="tns:Objekt_ETW_NV" />
-                <xs:element name="bewertungsDaten" type="tns:bewertungsDaten" />
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="BewerteDFHV">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="user" type="tns:user" />
-                <xs:element name="adresse" type="tns:adresse" />
-                <xs:element name="Objekt_DFH_V" type="tns:Objekt_DFH_V" />
-                <xs:element name="bewertungsDaten" type="tns:bewertungsDaten" />
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="BewerteDFHNV">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="user" type="tns:user" />
-                <xs:element name="adresse" type="tns:adresse" />
-                <xs:element name="Objekt_DFH_NV" type="tns:Objekt_DFH_NV" />
-                <xs:element name="bewertungsDaten" type="tns:bewertungsDaten" />
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
     <xs:element  name="BewerteEFHZFH">
         <xs:complexType>
             <xs:sequence>
@@ -144,6 +84,66 @@
                 <xs:element name="erbbauRecht" type="xs:boolean" />
             </xs:sequence>
     </xs:complexType>
+    <xs:element name="BewerteUBGS">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" type="tns:user" />
+                <xs:element name="adresse" type="tns:adresse" />
+                <xs:element name="Objekt_UBGS" type="tns:Objekt_UBGS" />
+                <xs:element name="bewertungsDaten" type="tns:bewertungsDaten" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="BewerteMFH">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" type="tns:user" />
+                <xs:element name="adresse" type="tns:adresse" />
+                <xs:element name="Objekt_MFH" type="tns:Objekt_MFH" />
+                <xs:element name="bewertungsDaten" type="tns:bewertungsDaten" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="BewerteETWV">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" type="tns:user" />
+                <xs:element name="adresse" type="tns:adresse" />
+                <xs:element name="Objekt_ETW_V" type="tns:Objekt_ETW_V" />
+                <xs:element name="bewertungsDaten" type="tns:bewertungsDaten" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="BewerteETWNV">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" type="tns:user" />
+                <xs:element name="adresse" type="tns:adresse" />
+                <xs:element name="Objekt_ETW_NV" type="tns:Objekt_ETW_NV" />
+                <xs:element name="bewertungsDaten" type="tns:bewertungsDaten" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="BewerteDFHV" >
+    <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" type="tns:user" />
+                <xs:element name="adresse" type="tns:adresse" />
+                <xs:element name="Objekt_DFH_V" type="tns:Objekt_DFH_V" />
+                <xs:element name="bewertungsDaten" type="tns:bewertungsDaten" />
+            </xs:sequence>
+    </xs:complexType>
+    </xs:element>
+    <xs:element name="BewerteDFHNV">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" type="tns:user" />
+                <xs:element name="adresse" type="tns:adresse" />
+                <xs:element name="Objekt_DFH_NV" type="tns:Objekt_DFH_NV" />
+                <xs:element name="bewertungsDaten" type="tns:bewertungsDaten" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
     <xs:complexType name="Objekt_UBGS">
         <xs:sequence>
             <xs:element name="bauJahr" type="xs:unsignedShort" />

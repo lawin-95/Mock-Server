@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2022.05.16 um 04:38:42 AM CEST 
+// Generiert: 2022.05.24 um 09:44:22 AM CEST 
 //
 
 
@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlRegistry;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the com.MockServer.v12 package.
+ * generated in the de.sprengnetter.webservices.t2c.ws.v12 package. 
  * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -30,7 +30,7 @@ public class ObjectFactory {
 
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.MockServer.v12
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: de.sprengnetter.webservices.t2c.ws.v12
      * 
      */
     public ObjectFactory() {
@@ -141,22 +141,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link BewerteDFHV }
-     * 
-     */
-    public BewerteDFHV createBewerteDFHV() {
-        return new BewerteDFHV();
-    }
-
-    /**
-     * Create an instance of {@link ObjektDFHV }
-     * 
-     */
-    public ObjektDFHV createObjektDFHV() {
-        return new ObjektDFHV();
-    }
-
-    /**
      * Create an instance of {@link BewerteEFHZFH }
      * 
      */
@@ -173,11 +157,27 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link BewerteDFHV }
+     * 
+     */
+    public BewerteDFHV createBewerteDFHV() {
+        return new BewerteDFHV();
+    }
+
+    /**
+     * Create an instance of {@link ObjektDFHV }
+     * 
+     */
+    public ObjektDFHV createObjektDFHV() {
+        return new ObjektDFHV();
+    }
+
+    /**
      * Create an instance of {@link BewertungsDaten.ZuFinanzieren }
      * 
      */
-  /*  public BewertungsDaten.ZuFinanzieren createBewertungsDatenZuFinanzieren() {
+    public BewertungsDaten.ZuFinanzieren createBewertungsDatenZuFinanzieren() {
         return new BewertungsDaten.ZuFinanzieren();
-    }*/
+    }
 
 }

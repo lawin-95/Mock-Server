@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2022.05.24 um 09:44:22 AM CEST 
+// Generiert: 2022.05.20 um 03:57:58 PM CEST 
 //
 
 
@@ -11,23 +11,22 @@ package de.sprengnetter.webservices.t2c.ws.v12;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für anonymous complex type.
+ * <p>Java-Klasse für BewerteDFHVType complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
- * &lt;complexType>
+ * &lt;complexType name="BewerteDFHVType">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="user" type="{http://ws.t2c.webservices.sprengnetter.de/v12}user"/>
  *         &lt;element name="adresse" type="{http://ws.t2c.webservices.sprengnetter.de/v12}adresse"/>
- *         &lt;element name="Objekt_DFH_NV" type="{http://ws.t2c.webservices.sprengnetter.de/v12}Objekt_DFH_NV"/>
+ *         &lt;element name="Objekt_DFH_V" type="{http://ws.t2c.webservices.sprengnetter.de/v12}Objekt_DFH_V"/>
  *         &lt;element name="bewertungsDaten" type="{http://ws.t2c.webservices.sprengnetter.de/v12}bewertungsDaten"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -38,21 +37,20 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
+@XmlType(name = "BewerteDFHVType", propOrder = {
     "user",
     "adresse",
-    "objektDFHNV",
+    "objektDFHV",
     "bewertungsDaten"
 })
-@XmlRootElement(name = "BewerteDFHNV")
-public class BewerteDFHNV {
+public class BewerteDFHVType {
 
     @XmlElement(required = true)
     protected User user;
     @XmlElement(required = true)
     protected Adresse adresse;
-    @XmlElement(name = "Objekt_DFH_NV", required = true)
-    protected ObjektDFHNV objektDFHNV;
+    @XmlElement(name = "Objekt_DFH_V", required = true)
+    protected ObjektDFHV objektDFHV;
     @XmlElement(required = true)
     protected BewertungsDaten bewertungsDaten;
 
@@ -105,27 +103,27 @@ public class BewerteDFHNV {
     }
 
     /**
-     * Ruft den Wert der objektDFHNV-Eigenschaft ab.
+     * Ruft den Wert der objektDFHV-Eigenschaft ab.
      * 
      * @return
      *     possible object is
-     *     {@link ObjektDFHNV }
+     *     {@link ObjektDFHV }
      *     
      */
-    public ObjektDFHNV getObjektDFHNV() {
-        return objektDFHNV;
+    public ObjektDFHV getObjektDFHV() {
+        return objektDFHV;
     }
 
     /**
-     * Legt den Wert der objektDFHNV-Eigenschaft fest.
+     * Legt den Wert der objektDFHV-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
-     *     {@link ObjektDFHNV }
+     *     {@link ObjektDFHV }
      *     
      */
-    public void setObjektDFHNV(ObjektDFHNV value) {
-        this.objektDFHNV = value;
+    public void setObjektDFHV(ObjektDFHV value) {
+        this.objektDFHV = value;
     }
 
     /**

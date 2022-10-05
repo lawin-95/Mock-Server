@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="CSS/style.css"/>
     <script type="text/javascript" src="script.js"></script>
 </head>
-<body>
-    <header>
-        <img class=header-image src="images/header.png">
-         
-    </header>
-  <h1>Kunde Auswahl</h1>
-<label class="container">First
-    <input  id="First" type="radio" checked="checked" name="radio" onchange="onCustomerChange()">
+<body style="display:flex;height:100%;flex-direction:column">
+<div>
+    <img class=header-image src="images/header.png" style="height:30%;width:100%;">
+</div>
+<div style="display: flex;height:70%;background-color: #F1F1F1;" >
+    <div style="width: 50%">
+  <h1>Kunde</h1>
+<label class="container">Kunde1
+    <input  id="Customer1" type="radio" checked="checked" name="radio" onchange="onCustomerChange()">
     <span class="checkmark"></span>
 </label>
-<label class="container">Swiss
-    <input id="Swiss" type="radio" name="radio" onchange="onCustomerChange()">
+<label class="container">Kunde2
+    <input id="Customer2" type="radio" name="radio" onchange="onCustomerChange()">
     <span class="checkmark"></span>
 </label>
-<label class="container">Three
-    <input id="Three" type="radio" name="radio" onchange="onCustomerChange()">
+<label class="container">Kunde3
+    <input id="Customer3" type="radio" name="radio" onchange="onCustomerChange()">
     <span class="checkmark"></span>
 </label>
-<label class="container">Four
-    <input id="Four" type="radio" name="radio" onchange="onCustomerChange()">
+<label class="container">Kunde4
+    <input id="Customer4" type="radio" name="radio" onchange="onCustomerChange()">
     <span class="checkmark"></span>
 </label>
-        
-<h1>Mockservice Ein/ausschalten</h1>
+    </div>
+    <div style="width: 50%">
+<h1>Mockservice Ein-ausschalten</h1>
 <label class="switch" >
 	<input class="switch-input" type="checkbox"  id="isEnabled" onchange="myFunction()"/>
 	<span class="switch-label" data-on="On" data-off="Off"></span> 
 	<span class="switch-handle"></span> 
 </label>
-
+    </div>
+</div>
 </body>
 </html>

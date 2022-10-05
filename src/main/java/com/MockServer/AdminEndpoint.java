@@ -1,5 +1,6 @@
 package com.MockServer;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -11,21 +12,10 @@ import java.io.IOException;
 public class AdminEndpoint {
 
     private AdminService adminService;
-
+    @Autowired
     public AdminEndpoint(AdminService adminService){
         this.adminService = adminService;
 
-    }
-
-    @GetMapping(value = "/login")
-    public String login(){
-        return login();
-    }
-
-    @GetMapping(value = "/index")
-    public String index()
-    {
-        return "index";
     }
 
     @GetMapping(value = "/setServerEnabled")
